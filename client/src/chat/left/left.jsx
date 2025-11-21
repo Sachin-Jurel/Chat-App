@@ -6,7 +6,7 @@ import ChatUsers from '../../components/ChatUsers'
 const Left = () => {
   return (
     <div className='w-[30%] bg-slate-950 flex text-white'>
-      <div className='h-screen w-[10%] bg-slate-900'>
+      <div className='h-screen w-[15%] bg-slate-900'>
         <LeftTools />
       </div>
 
