@@ -1,7 +1,10 @@
 import React from "react";
 import { Search, Phone, MoreVertical } from "lucide-react";
+import { useContext } from "react";
+import { useChatUser } from "../../context/chatUserContext.jsx";
 
 const RightPanelHeader = () => {
+  const {currentChatUser} = useChatUser();
   return (
     <div
       className="
@@ -13,14 +16,14 @@ const RightPanelHeader = () => {
       {/* Left: Avatar + Name */}
       <div className="flex items-center gap-3">
         <img
-          src="https://dummyimage.com/50x50/444/fff"
+          src={currentChatUser ? currentChatUser.avatar : "https://i.pravatar.cc/150?img=3"}
           alt="avatar"
           className="w-12 h-12 rounded-full"
         />
 
         <div className="flex flex-col">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-            Sachin Jurel
+            {currentChatUser ? currentChatUser.name : "Sachin"}
           </h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Online

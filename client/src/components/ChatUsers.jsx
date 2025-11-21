@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import { useChatUser } from "../context/chatUserContext.jsx";
 
 const users = [
   { id: 1, name: "Arjun Sharma", avatar: "https://i.pravatar.cc/150?img=1", lastMessage: "Hey, what's up?" },
@@ -12,10 +14,12 @@ const users = [
 ];
 
 const ChatUsers = () => {
+  const {setCurrentChatUser} = useChatUser();
   return (
     <div className="flex-1 overflow-x-hidden p-3 space-y-3 overflow-y-scroll hide-scrollbar h-full">
       {users.map((user) => (
         <div
+          onClick={() => setCurrentChatUser(user)}
           key={user.id}
           className="flex items-center gap-3 p-3 rounded-lg bg-slate-800 hover:bg-slate-700 cursor-pointer transition"
         >
