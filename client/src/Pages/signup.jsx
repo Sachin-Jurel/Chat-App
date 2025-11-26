@@ -26,7 +26,7 @@ const Signup = () => {
       });
       const data = response.data.user;
       setUser(data);
-      navigate("/chat");
+      navigate("/user");
     } catch (error) {
       console.error("Error during registration:", error);
       alert("An error occurred. Please try again.");

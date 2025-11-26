@@ -25,7 +25,7 @@ export default function Login() {
       });
       const data = response.data.user;
       setUser(data);
-      navigate("/chat");
+      navigate("/user");
     } catch (error) {
       console.error("Error during login:", error);
       alert("An error occurred. Please try again.");

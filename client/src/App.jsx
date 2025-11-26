@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Login from './Pages/Login'
 import Signup from './Pages/signup'
-import ChatPage from './chat/chat'
+import ChatPage from './chat/chatPage'
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Login/>} />
       <Route path='/register' element={<Signup/>} />
-      <Route path='/chat' element={<ChatPage/>} />
+      <Route path='/user' element={<ChatPage/>} />
     </Routes>
   )
 }
