@@ -7,7 +7,7 @@ const RightPanelHeader = () => {
   return (
     <div
       className="
-        w-full px-4 py-3 border-b flex items-center justify-between
+        w-full px-4 py-3 border-b fixed flex items-center justify-between
         bg-white border-gray-200
         dark:bg-slate-900 dark:border-slate-800
       "

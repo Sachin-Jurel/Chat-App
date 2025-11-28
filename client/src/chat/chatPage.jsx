@@ -12,7 +12,7 @@ const ChatPage = () => {
   
   return (
     <div className='h-screen flex'>
-      <Left />
+      <Left/>
       <Right />
     </div>
   )
