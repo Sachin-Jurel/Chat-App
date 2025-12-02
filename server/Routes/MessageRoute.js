@@ -4,6 +4,7 @@ import Conversation from "../models/conversation.js";
 import Message from "../models/message.model.js";
 import { getReceiverSocketId} from "../SocketIO/SocketServer.js";
 import {io} from "../SocketIO/SocketServer.js"
+import User from "../models/user.js";
 
 const router = Router();
 
@@ -30,6 +31,8 @@ router.post("/send/:id", auth, async (req, res) => {
     });
 
     conversation.messages.push(newMessage._id);
+    await User.findByIdAndUpdate(senderId, { lastMessage: message });
+await User.findByIdAndUpdate(receiverId, { lastMessage: message });
 
     await Promise.all([conversation.save(), newMessage.save()]);
     const receiverSocketId = await getReceiverSocketId(receiverId);

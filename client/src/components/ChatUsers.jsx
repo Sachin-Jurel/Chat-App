@@ -15,6 +15,7 @@ const ChatUsers = () => {
           withCredentials: true,
         });
         setUsers(res.data);
+        console.log(res.data);
       } catch (err) {
         console.error("Error fetching users:", err);
       }
@@ -23,7 +24,7 @@ const ChatUsers = () => {
   }, []);
 
   return (
-    <div className="flex-1 overflow-x-hidden p-3 space-y-3 overflow-y-scroll hide-scrollbar h-full">
+    <div className="flex-1 overflow-x-hidden p-3 space-y-3 h-[540px] overflow-y-scroll hide-scrollbar">
       {users.map((user) => {
         const isOnline = onlineUsers.includes(user._id);
 
