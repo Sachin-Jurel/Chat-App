@@ -20,7 +20,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/", formData, {
+      const response = await axios.post("https://chatzy-bx9a.onrender.com/", formData, {
         withCredentials: true,
       });
       const data = response.data.user;
