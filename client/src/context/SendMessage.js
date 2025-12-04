@@ -23,7 +23,7 @@ const SendMessages = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:5000/message/send/${selectedConversation._id}`,
+        `https://chatzy-bx9a.onrender.com/message/send/${selectedConversation._id}`,
         { message: messageText },
         { withCredentials: true }
       );

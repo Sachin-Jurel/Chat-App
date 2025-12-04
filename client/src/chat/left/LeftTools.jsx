@@ -8,7 +8,7 @@ const LeftTools = () => {
   const navigate = useNavigate();
   const Logout = () => {
     try{
-      const response = axios.post("http://localhost:5000/logout", {}, {
+      const response = axios.post("https://chatzy-bx9a.onrender.com/logout", {}, {
         withCredentials: true,
       }
       );

@@ -11,7 +11,7 @@ const ChatUsers = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/users", {
+        const res = await axios.get("https://chatzy-bx9a.onrender.com/users", {
           withCredentials: true,
         });
         setUsers(res.data);
