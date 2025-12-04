@@ -15,7 +15,6 @@ const ChatUsers = () => {
           withCredentials: true,
         });
         setUsers(res.data);
-        console.log(res.data);
       } catch (err) {
         console.error("Error fetching users:", err);
       }

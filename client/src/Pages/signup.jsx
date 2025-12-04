@@ -21,7 +21,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/register", formData, {
+      const response = await axios.post("http://localhost:5173/register", formData, {
         withCredentials: true,
       });
       const data = response.data.user;
